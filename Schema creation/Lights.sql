@@ -1,8 +1,8 @@
 CREATE TABLE LIGHTS (
-	Light_partNum INT NOT NULL,
-	Wattage INT NOT NULL,
-	Lifespan INT NOT NULL,
-	Color_temp INT NOT NULL,
-	Socket INT NOT NULL,
+	Light_partNum VARCHAR(30) NOT NULL,
+	Wattage INT,
+	Voltage INT,
+	Socket VARCHAR(30),
+	Bulb_type VARCHAR(30),
 	PRIMARY KEY (Light_partNum)
 );
