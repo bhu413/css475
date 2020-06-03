@@ -8,4 +8,5 @@ INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wh
 INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Audi', 'S5', 'CAKA, CCBA', 'D3S', '8T0601025A');
 INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Honda', 'Fit', 'L12B i-VTEC', '9003SU-2', 'T5A16060A');
 INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Subaru', 'Legacy', 'H4 EJ25', 'H11SU-2', '129944-04165200');
+INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Mercedes-Benz', 'GLA 250', 'M270', 'H7SU-2', '1564011300');
 */

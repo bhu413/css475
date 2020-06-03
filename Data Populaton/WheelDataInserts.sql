@@ -8,4 +8,5 @@ INSERT INTO Wheels (Rim_size, Wheel_partNum, Tire_partNum) VALUES (19, '36116858
 INSERT INTO Wheels (Rim_size, Wheel_partNum, Tire_partNum) VALUES (18, '8T0601025A', 'DZ102');
 INSERT INTO Wheels (Rim_size, Wheel_partNum, Tire_partNum) VALUES (16, 'T5A16060A', '3HM');
 INSERT INTO Wheels (Rim_size, Wheel_partNum, Tire_partNum) VALUES (17, '129944-04165200', 'PA31');
+INSERT INTO Wheels (Rim_size, Wheel_partNum, Tire_partNum) VALUES (18, '1564011300', 'LS-2');
 */
