@@ -1,15 +1,15 @@
 
 
-alter table Vehicle drop constraint PK__SPARK_PL__DD4B6482526F33C4;
+alter table Wheels drop constraint PK__WHEELS__D6441F88DD27AD5E;
 
-alter table engine drop column Spark_partNum;
+alter table Vehicle drop column Wheel_partNum;
 
-alter table Spark_Plug alter column Spark_partNum varchar(30);
+alter table Wheels alter column Wheel_partNum varchar(30);
 
-alter table Spark_plug add primary key (Spark_partNum);
+alter table Wheels add primary key (Wheel_partNum);
 
-alter table engine add Spark_partNum varchar(30);
+alter table Vehicle add Wheel_partNum varchar(30);
 
-alter table engine add Foreign Key (Spark_partNum) REFERENCES SPARK_PLUG (Spark_partNum);
+alter table Vehicle add Foreign Key (Wheel_partNum) REFERENCES Wheels (Wheel_partNum);
 
 
