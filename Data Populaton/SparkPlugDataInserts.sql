@@ -5,4 +5,5 @@ INSERT INTO SPARK_PLUG (Spark_partNum, Seat_style, Thread_size, Drive_size) VALU
 INSERT INTO SPARK_PLUG (Spark_partNum, Seat_style, Thread_size, Drive_size) VALUES ('9607', 'Gasket', 14, 16);
 INSERT INTO SPARK_PLUG (Spark_partNum, Seat_style, Thread_size, Drive_size) VALUES ('93026', 'Gasket', 12, 14);
 INSERT INTO SPARK_PLUG (Spark_partNum, Seat_style, Thread_size, Drive_size) VALUES ('97506', 'Gasket', 26, 14);
+INSERT INTO SPARK_PLUG (Spark_partNum, Seat_style, Thread_size, Drive_size) VALUES ('XP3923', 'Gasket', 14, 0.625);
 */

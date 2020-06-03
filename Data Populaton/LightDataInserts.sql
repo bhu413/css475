@@ -7,4 +7,6 @@ INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES (
 INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('1864755007S', 'H7', 12, 35, 'HID');
 INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('9007XV-2', '9007', 12, 65, 'Halogen');
 INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('D1SSZ', 'H7', 12, 35, 'HID');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('D3S', 'H8', 12, 35, 'HID');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('H11SU-2', 'H11', 12, 60, 'Halogen');
 */

@@ -5,4 +5,7 @@ INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wh
 INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Hyundai', 'Genesis', 'Lambda GDI', '1864755007S', 'ALY70873');
 INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Toyota', 'Tacoma', '2TR-FE', '9007XV-2', '42601AD020');
 INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'BMW', 'X6', 'N55B30M0', 'D1SSZ', '36116858874');
+INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Audi', 'S5', 'CAKA, CCBA', 'D3S', '8T0601025A');
+INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Honda', 'Fit', 'L12B i-VTEC', '9003SU-2', 'T5A16060A');
+INSERT INTO VEHICLE (Model_year, Make, Model, Engine_modelNum, Light_partNum, Wheel_partNum) VALUES (2015, 'Subaru', 'Legacy', 'H4 EJ25', 'H11SU-2', '129944-04165200');
 */
