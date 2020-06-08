@@ -28,6 +28,7 @@ function getWholeQuery(query) {
     xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("output").innerHTML += this.responseText;
+                document.getElementById("output").scrollIntoView();
             }
         }
     xmlhttp.open("GET", "getQuery.php?wholeQuery=" + query, true);

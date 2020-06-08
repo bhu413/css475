@@ -1,5 +1,5 @@
 .dropdown {
-    margin-top: 50px;
+    margin-top: 15px;
     margin-bottom: 50px;
 }
 
@@ -33,3 +33,7 @@ form {
     margin-left: 15px;
     margin-right: 15px;
 }
+
+html {
+    scroll-behavior: smooth;
+  }

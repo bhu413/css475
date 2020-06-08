@@ -24,7 +24,7 @@
     <div class="container-md">
       <div class="row" style="margin-top: 50px">
         <div class="col text-center">
-            <h1> Welcome to the vehicle parts database</h1>
+            <h1> Welcome to The Vehicle Parts Database</h1>
             <h5>Created by Brandon Hu and Mahamadou Diallo</h5>
         </div>
       </div>
@@ -36,7 +36,7 @@
               <input type="radio" name="options" id="option1" autocomplete="off" checked onclick="showSection('dropdown')"> Dropdown Search
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name="options" id="option2" autocomplete="off" onclick="showSection('viewAll')"> View All
+              <input type="radio" name="options" id="option2" autocomplete="off" onclick="showSection('viewAll')"> View Tables
             </label>
             <label class="btn btn-primary">
               <input type="radio" name="options" id="option3" autocomplete="off" onclick="showSection('manual')"> Manual Query
@@ -47,12 +47,12 @@
 
       <!-- Start of Dropdown Search Div -->
       <div id="dropdownSearch">
-        <h4 class="text-center" style="margin-top: 50px; color: #dfdb00; font-size: 18px">Input data and wait for autofill to appear</h4>
-        <h4 class="text-center" style="color: #dfdb00; font-size: 15px">No autofill means there are no matches</h4>
+        <h4 class="text-center" style="margin-top: 50px; font-size: 18px">Click "Select Part", input data and wait for autofill to appear</h4>
+        <h4 class="text-center" style="color: #dfdb00; font-size: 15px"><u>No autofill means there are no matches</u></h4>
         <div class="container" style="margin-top: 20px;">
           <div class="dropdown item">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Select Object
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 35px;">
+              Select Part
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="showAllDropdown">
               <a class="dropdown-item" onclick="showDropdown('engine')">Engines</a>
@@ -73,9 +73,9 @@
             </div>
           </div>
           
-          <div class="row" style="margin-top: 50px;">
+          <div class="row" style="margin-top: 15px;">
             <div class="col text-center">
-              <h2>OR</h2>
+              <h4>OR</h4>
             </div>
           </div>
           
@@ -83,7 +83,7 @@
             <div class="col text-center">
               <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Get Compatible
+                  Compatible Parts
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="showAllDropdown">
                   <a class="dropdown-item" id="compatibleEngine" style="display: none;" onclick="getCompatible('ENGINE')">Engines</a>
