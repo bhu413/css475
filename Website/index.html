@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" type="text/javascript"></script>
+  </head>
+
+  <body class = "bg-dark text-white">
+    <div class="container-md">
+      <div class="row" style="margin-top: 50px">
+        <div class="col text-center">
+            <h1> Welcome to The Vehicle Parts Database</h1>
+            <h5>Created by Brandon Hu and Mahamadou Diallo</h5>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 50px;">
+        <div class="col text-center">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-primary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked onclick="showSection('dropdown')"> Dropdown Search
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option2" autocomplete="off" onclick="showSection('viewAll')"> View Tables
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option3" autocomplete="off" onclick="showSection('manual')"> Manual Query
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start of Dropdown Search Div -->
+      <div id="dropdownSearch">
+        <h4 class="text-center" style="margin-top: 50px; font-size: 18px">Click "Select Part", input data and wait for autofill to appear</h4>
+        <h4 class="text-center" style="color: #dfdb00; font-size: 15px"><u>No autofill means there are no matches</u></h4>
+        <div class="container" style="margin-top: 20px;">
+          <div class="dropdown item">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 35px;">
+              Select Part
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="showAllDropdown">
+              <a class="dropdown-item" onclick="showDropdown('engine')">Engines</a>
+              <a class="dropdown-item" onclick="showDropdown('lights')">Lights</a>
+              <a class="dropdown-item" onclick="showDropdown('sparkPlug')">Spark Plugs</a>
+              <a class="dropdown-item" onclick="showDropdown('vehicle')">Vehicles</a>
+              <a class="dropdown-item" onclick="showDropdown('wheels')">Wheels</a>
+              <a class="dropdown-item" onclick="showDropdown('tires')">Tires</a>
+            </div>
+          </div>
+          <div id="dropdowns" class="container"></div>
+        </div>
+
+        <div id="searchOptions" style="opacity: 0;">
+          <div class="row" style="margin-top: 50px;">
+            <div class="col text-center">
+              <button class="btn btn-primary" type="button" onclick="clearOutput(); getWholeQuery('SELECT * ' + secondHalfQuery)">Search</button>
+            </div>
+          </div>
+          
+          <div class="row" style="margin-top: 15px;">
+            <div class="col text-center">
+              <h4>OR</h4>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col text-center">
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Compatible Parts
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="showAllDropdown">
+                  <a class="dropdown-item" id="compatibleEngine" style="display: none;" onclick="getCompatible('ENGINE')">Engines</a>
+                  <a class="dropdown-item" id="compatibleLights" style="display: none;" onclick="getCompatible('LIGHTS')">Lights</a>
+                  <a class="dropdown-item" id="compatibleSparkPlug" style="display: none;" onclick="getCompatible('SPARK_PLUG')">Spark Plugs</a>
+                  <a class="dropdown-item" id="compatibleVehicle" style="display: none;" onclick="getCompatible('VEHICLE')">Vehicles</a>
+                  <a class="dropdown-item" id="compatibleWheels" style="display: none;" onclick="getCompatible('WHEELS')">Wheels</a>
+                  <a class="dropdown-item" id="compatibleTires" style="display: none;" onclick="getCompatible('TIRES')">Tires</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Dropdown Search Div -->
+
+      <!-- Start of View All Div -->
+      <div id="viewAll" style="display:none;">
+        <div class="row">
+          <div class="col text-center">
+            <div class="dropdown">
+              <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Table to View
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="showAllDropdown">
+                <a class="dropdown-item" onclick="clearOutput(); getAllFrom('ENGINE');">Engines</a>
+                <a class="dropdown-item" onclick="clearOutput(); getAllFrom('LIGHTS');">Lights</a>
+                <a class="dropdown-item" onclick="clearOutput(); getAllFrom('SPARK_PLUG');">Spark Plugs</a>
+                <a class="dropdown-item" onclick="clearOutput(); getAllFrom('VEHICLE');">Vehicles</a>
+                <a class="dropdown-item" onclick="clearOutput(); getAllFrom('WHEELS');">Wheels</a>
+                <a class="dropdown-item" onclick="clearOutput(); getAllFrom('TIRES')">Tires</a>
+                <a class="dropdown-item" onclick="clearOutput(); getAllTables()">All Tables</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of View All Div -->
+
+      <!-- Start of Manual Entry Div -->
+      <div id="manualEntry" style="display:none;">
+        <div class="row" style="margin-top: 50px; margin-bottom: 50px;">
+          <div class="col-lg text-center">
+            <form action="#" onsubmit="clearOutput(); getWholeQuery(document.getElementById('queryForm').value);" class="form-horizontal">
+              <input type="text" autocomplete="off" placeholder="Enter SQL Query e.g. SELECT * FROM VEHICLE WHERE Make = 'Audi'" id="queryForm" style="width: 850px; height: 35px;">
+              <input type="submit" value="Submit" class=" btn btn-primary">
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- End of Manual Entry Div -->
+
+      <!-- Output Section -->
+      <div class="row">
+        <div class = "col text-center" id="output">
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
