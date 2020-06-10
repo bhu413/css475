@@ -108,7 +108,7 @@ function showDropdown(table) {
     } else if (table == 'vehicle') {
         engine.style.display = 'block';
         lights.style.display = 'block';
-        sparkPlug.style.display = 'blcok';
+        sparkPlug.style.display = 'block';
         vehicle.style.display = 'none';
         wheels.style.display = 'block';
         tires.style.display = 'block';
@@ -312,6 +312,8 @@ function getCompatible(table) {
             query = "SELECT * FROM " + table + " WHERE Wheel_partNum IN (SELECT Wheel_partNum " + secondHalfQuery + ")";
         } else if (table == 'TIRES') {
             query = "SELECT * FROM " + table + " WHERE Tire_partNum IN (SELECT Tire_partNum FROM WHEELS WHERE Wheel_partNum IN (SELECT Wheel_partNum " + secondHalfQuery + "))";
+        } else if (table == 'SPARK_PLUG') {
+            query = "SELECT * FROM " + table + " WHERE Spark_partNum IN (SELECT Spark_partNum FROM ENGINE WHERE Engine_modelNum IN (SELECT Engine_modelNum " + secondHalfQuery + "))";
         }
     } else if (currentDropdown == 'WHEELS') {
         if (table == 'VEHICLE') {
@@ -326,6 +328,6 @@ function getCompatible(table) {
             query = "SELECT * FROM " + table + " WHERE Tire_partNum IN (SELECT Tire_partNum " + secondHalfQuery + ")";
         }
     }
-    console.log(query);
+    //console.log(query);
     getWholeQuery(query);
 }
