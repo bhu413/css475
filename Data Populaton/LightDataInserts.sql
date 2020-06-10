@@ -10,4 +10,14 @@ INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES (
 INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('D3S', 'H8', 12, 35, 'HID');
 INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('H11SU-2', 'H11', 12, 60, 'Halogen');
 INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('H7SU-2', 'H7', 12, 60, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('H7XV-2', 'H7', 12, 60, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('9005XV-2', '9005', 12, 65, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('9006XV-2', 9006, 12, 60, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('9006XSSZ-2', 9006, 12, 60, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('9007XV', 9007, 12, 65, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('H11XV-2', 'H11', 12, 55, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('9012XV', 9012, 12, 60, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('9005XV', 9005, 12, 65, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('H1XV', 'H1', 12, 60, 'Halogen');
+INSERT INTO LIGHTS (Light_partNum, Socket, Voltage, Wattage, Bulb_type) VALUES ('9003XV-2', '9003', 12, 60, 'Halogen');
 */
